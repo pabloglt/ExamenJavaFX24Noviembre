@@ -74,7 +74,7 @@ public class MainController {
                     }
                 }
         );
-        // 3. Configurar el Spinner para Edad (ejemplo de 1 a 100)
+        
         SpinnerValueFactory<Integer> valueFactory =
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 100, 2);
         spVersion.setValueFactory(valueFactory);
@@ -150,4 +150,5 @@ public class MainController {
                     "Todos los usuarios han sido eliminados de la lista.");
         }
     }
+
 }
