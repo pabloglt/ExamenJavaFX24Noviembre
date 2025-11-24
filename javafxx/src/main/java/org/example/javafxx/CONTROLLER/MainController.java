@@ -123,7 +123,6 @@ public class MainController {
         Alert alerta = new Alert(Alert.AlertType.INFORMATION);
         alerta.setTitle("Ficha de Usuario");
 
-        // 🔑 CORRECCIÓN 6: Usar la propiedad booleana correcta
         String esAdmin = p.getAdministrador() ? "Sí" : "No";
 
         alerta.setHeaderText("Email: " + p.getEmail());
@@ -152,3 +151,4 @@ public class MainController {
     }
 
 }
+
