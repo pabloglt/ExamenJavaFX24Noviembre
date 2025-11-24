@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane styleClass="border-pane" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javafxx.CONTROLLER.MainController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <left>
+      <BorderPane BorderPane.alignment="CENTER">
+         <top>
+            <Label prefHeight="144.0" prefWidth="396.0" text="------Gestor de Usuarios------" BorderPane.alignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="99.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/group.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </top>
+         <bottom>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <HBox spacing="15.0">
+                     <children>
+                        <TableView fx:id="tvPersonas" prefHeight="332.0" prefWidth="378.0">
+                          <columns>
+                            <TableColumn fx:id="colEmail" prefWidth="75.0" text="Correo" />
+                            <TableColumn fx:id="colPlataforma" prefWidth="75.0" text="Plataforma" />
+                              <TableColumn fx:id="colAdministrador" prefWidth="75.0" text="Administrador" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <VBox alignment="CENTER_LEFT" prefHeight="177.0" prefWidth="138.0" spacing="15.0">
+                           <children>
+                              <Button fx:id="btnvaciar" mnemonicParsing="false" onAction="#VaciarTabla" text="Vaciar Tabla" />
+                              <Label text="Correo" />
+                              <TextField fx:id="tfEmail" />
+                              <Label text="Plataforma" />
+                              <ComboBox fx:id="cbPlataforma" prefWidth="150.0" />
+                              <Label text="Versión" />
+                              <Spinner fx:id="spVersion" />
+                              <CheckBox fx:id="cbAdministrador" mnemonicParsing="false" text="¿Es admin?" />
+                              <VBox alignment="CENTER" prefHeight="36.0" prefWidth="260.0" spacing="15.0">
+                                 <children>
+                                    <Button fx:id="btnAnadir" mnemonicParsing="false" onAction="#anadir" text="Añadir">
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../images/enter.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </bottom>
+      </BorderPane>
+   </left>
+</BorderPane>
